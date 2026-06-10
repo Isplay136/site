@@ -189,6 +189,49 @@
       .plans { flex-direction: column; align-items: center; }
       .plan-card { width: 100%; max-width: 350px; }
       .video-container { padding-bottom: 75%; } /* Ajuste para mobile */
+
+      /* Estilos para o Link do YouTube */
+.video-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.video-link:hover {
+  transform: scale(1.02);
+}
+.video-link img {
+  width: 100%;
+  display: block;
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.play-button::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid var(--green);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  margin-left: 4px;
+}
     }
   </style>
 </head>
@@ -223,6 +266,11 @@
   </div>
 </section>
 
+
+
+
+
+    
     <section class="container">
       <div class="plans">
         <div class="plan-card">
