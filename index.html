@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Software — Compre Acesso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #66B539;
+      --green-dark: #4a8a28;
+      --green-light: #E8F7DD;
+      --dark: #151B1F;
+      --dark2: #374148;
+      --white: #ffffff;
+      --gray: #f5f7f4;
+      --text: #2d3436;
+      --text-dim: #636e72;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 60px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(102,181,57,0.15);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 20px;
+      color: var(--dark);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo span { color: var(--green); }
+    .nav-logo .dot {
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .nav-cta {
+      background: var(--green);
+      color: white;
+      border: none; border-radius: 8px;
+      padding: 10px 24px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    main { padding-top: 100px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .hero {
+      text-align: center;
+      padding: 80px 0;
+    }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      color: var(--text-dim);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: white;
+      border: none; border-radius: 8px;
+      padding: 14px 32px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--green-dark); }
+    .plans {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 50px 0;
+      flex-wrap: wrap;
+    }
+    .plan-card {
+      background: white;
+      border: 2px solid rgba(102,181,57,0.2);
+      border-radius: 16px;
+      padding: 40px 30px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+    }
+    .plan-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .plan-card .price {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .plan-card .price span {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-dim);
+    }
+    .plan-card p {
+      color: var(--text-dim);
+      margin-bottom: 30px;
+    }
+    .plan-card a {
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 32px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .plan-card a:hover { background: var(--green-dark); }
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 14px;
+      border-top: 1px solid rgba(102,181,57,0.1);
+    }
+    @media (max-width: 768px) {
+      nav { padding: 18px 20px; }
+      .hero h1 { font-size: 40px; }
+      .plans { flex-direction: column; align-items: center; }
+      .plan-card { width: 100%; max-width: 350px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">
+      <span>Meu Software</span>
+      <span class="dot"></span>
+    </div>
+    <a href="pagamento.html" class="nav-cta">Comprar Acesso</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Automatize seu trabalho<br>com o Meu Software</h1>
+        <p>Escolha um plano e pague via PIX. Entre em contato para receber sua chave de acesso.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="plans">
+        <div class="plan-card">
+          <h3>Plano Mensal</h3>
+          <div class="price">R$ 29<span>,90</span></div>
+          <p>Acesso por 30 dias</p>
+          <a href="pagamento.html?plan=mensal">Comprar</a>
+        </div>
+        <div class="plan-card">
+          <h3>Plano Trimestral</h3>
+          <div class="price">R$ 69<span>,90</span></div>
+          <p>Acesso por 90 dias</p>
+          <a href="pagamento.html?plan=trimestral">Comprar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Meu Software. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
